@@ -1,3 +1,6 @@
+// ── MOBILE DETECTION ───────────────────────────────────────────
+const isMobile = () => window.innerWidth <= 768;
+
 // ── BOOT SEQUENCE ──────────────────────────────────────────────
 (function boot() {
   const pct = document.getElementById('boot-pct');
@@ -129,6 +132,7 @@ function removeTaskbarBtn(winId) {
 let dragState = null;
 
 function startDrag(e, winId) {
+  if (isMobile()) return;
   const win = document.getElementById(winId);
   focusWindow(winId);
   const rect = win.getBoundingClientRect();

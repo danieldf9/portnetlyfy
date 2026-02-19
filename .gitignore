@@ -1,0 +1,8 @@
+node_modules/
+tmp_extract/
+extract_pdf.js
+extract_pdf2.mjs
+DanielFernandes-Automation_Test_Engineer.pdf
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,86 @@
+  <!-- EXPERIENCE WINDOW -->
+  <div class="window" id="logs-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'logs-window')">
+      <span class="window-title">SYSTEM_LOGS.txt</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('logs-window','icon-logs')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">EXPERIENCE_LOG</h3>
+      <div class="exp-entry">
+        <div class="exp-date">[OCT 2023 - PRESENT]</div>
+        <div class="exp-title">OneOrigin - Automation Test Engineer</div>
+        <div class="exp-bullet">Led QA ensuring 100% business objective compliance</div>
+        <div class="exp-bullet">+65% testing efficiency via automated test scripts</div>
+        <div class="exp-bullet">-20% testing cycle time; -15% via process improvements</div>
+        <div class="exp-bullet">Performance testing with JMeter: +40% system stability</div>
+        <div class="exp-bullet">+30% cloud testing coverage on AWS applications</div>
+        <div class="exp-bullet">Mentored junior QA engineers: +25% team productivity</div>
+        <div class="exp-bullet">Validated 50+ product requirement specifications</div>
+        <div class="exp-bullet">+20% sprint velocity via Agile ceremony participation</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-date">[NOV 2020 - JUL 2023]</div>
+        <div class="exp-title">Cognizant - Test Analyst</div>
+        <div class="exp-bullet">Selenium WebDriver automation: -70% manual testing effort</div>
+        <div class="exp-bullet">Python automation solution: -75% testing cycle time</div>
+        <div class="exp-bullet">Cypress data validation: -60% audit team involvement</div>
+        <div class="exp-bullet">Chatbot QA for Cigna Healthcare: -50% data intake time</div>
+        <div class="exp-bullet">SQL &amp; DB2 data mining: +30% decision-making accuracy</div>
+        <div class="exp-bullet">MyCigna sales demo portal via HPE Service Virtualization</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS WINDOW -->
+  <div class="window" id="projects-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'projects-window')">
+      <span class="window-title">./PROJECTS/CASE_STUDIES</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('projects-window','icon-projects')">X</div></div>
+    </div>
+    <div class="window-content">
+      <p style="color:var(--muted-foreground);font-size:11px;margin-bottom:10px;">Click a project to view the full case study:</p>
+      <div class="projects-grid">
+        <div class="project-card" onclick="showProject('playwright')"><div class="project-icon">&#127914;</div><div class="project-name">Playwright Web Automation</div><div class="project-desc">End-to-end test framework with JS</div></div>
+        <div class="project-card" onclick="showProject('cypress')"><div class="project-icon">&#127807;</div><div class="project-name">Cypress Data Validation</div><div class="project-desc">Automated audit validation suite</div></div>
+        <div class="project-card" onclick="showProject('chatbot')"><div class="project-icon">&#129302;</div><div class="project-name">Chatbot QA - Cigna</div><div class="project-desc">Data intake automation chatbot testing</div></div>
+        <div class="project-card" onclick="showProject('python')"><div class="project-icon">&#128013;</div><div class="project-name">Python Test Automation</div><div class="project-desc">Accelerated testing cycles by 75%</div></div>
+        <div class="project-card" onclick="showProject('jmeter')"><div class="project-icon">&#9889;</div><div class="project-name">JMeter Performance Suite</div><div class="project-desc">Scalability testing for 3 key apps</div></div>
+        <div class="project-card" onclick="showProject('salesportal')"><div class="project-icon">&#127970;</div><div class="project-name">MyCigna Sales Demo Portal</div><div class="project-desc">HPE Service Virtualization testing</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL WINDOW -->
+  <div class="window" id="project-detail-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'project-detail-window')">
+      <span class="window-title" id="proj-detail-title">PROJECT_DETAIL.txt</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('project-detail-window','')">X</div></div>
+    </div>
+    <div class="window-content" id="proj-detail-body"></div>
+  </div>
+
+  <!-- AWARDS WINDOW -->
+  <div class="window" id="awards-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'awards-window')">
+      <span class="window-title">ACHIEVEMENTS.exe</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('awards-window','icon-awards')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">ACHIEVEMENTS &amp; AWARDS</h3>
+      <div class="awards-section">
+        <div class="awards-section-title">-- AWARDS --</div>
+        <div class="award-item"><div class="award-icon">&#129351;</div><div><div class="award-name">Performance Excellence - Q1 2024</div><div class="award-desc">Certificate of recognition for excellent work, dedication and high quality delivery at OneOrigin.</div></div></div>
+        <div class="award-item"><div class="award-icon">&#129352;</div><div><div class="award-name">Customer Success - Q2 2024</div><div class="award-desc">Certification for outstanding dedication in customer satisfaction.</div></div></div>
+      </div>
+      <div class="awards-section">
+        <div class="awards-section-title">-- CERTIFICATIONS --</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Google Cloud Skills Boost (4 badges)</div><div class="cert-issuer">Google Cloud</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Salesforce Developer (790,000 pts)</div><div class="cert-issuer">Salesforce</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">IBM Data Science Foundations - Level 2</div><div class="cert-issuer">IBM</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Automation Anywhere RPA Developer Essentials</div><div class="cert-issuer">Automation Anywhere University</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">VMware Network Virtualization Concepts</div><div class="cert-issuer">IT Academy</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Cisco Introduction to Cybersecurity</div><div class="cert-issuer">Cisco</div></div></div>
+      </div>
+    </div>
+  </div>

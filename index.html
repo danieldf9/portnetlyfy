@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Fernandes — Automation Test Engineer | DF-OS Portfolio</title>
+  <meta name="description" content="Daniel Fernandes — Automation Test Engineer. Playwright, Cypress, Selenium, AWS, Python.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="boot-screen">
+  <div class="boot-line" style="animation-delay:.1s">DF-OS BIOS v1.0 — Daniel Fernandes Systems Inc.</div>
+  <div class="boot-line" style="animation-delay:.4s">Checking RAM.......... 640KB OK</div>
+  <div class="boot-line" style="animation-delay:.8s">Detecting drives......</div>
+  <div class="boot-line" style="animation-delay:1.1s">C:\ — 500GB SSD [HEALTHY]</div>
+  <div class="boot-line" style="animation-delay:1.4s">D:\ — Portfolio Archive [MOUNTED]</div>
+  <div class="boot-line" style="animation-delay:1.8s">Loading DF-OS Kernel............</div>
+  <div class="boot-line" style="animation-delay:2.2s">Initializing network interfaces... OK</div>
+  <div class="boot-line" style="animation-delay:2.5s">Starting display driver... CRT_MODE ACTIVE</div>
+  <div class="boot-line" style="animation-delay:2.8s">"Loading modules: [Playwright] [Cypress] [Selenium] [AWS]"</div>
+  <div class="boot-line" style="animation-delay:3.1s">"Loading QA subsystems: [BDD] [JMeter] [Postman] [Python]"</div>
+  <div class="boot-line" style="animation-delay:3.5s">+------------------------------------------+</div>
+  <div class="boot-line" style="animation-delay:3.6s">|   DF-OS v1.0 -- All Systems Operational  |</div>
+  <div class="boot-line" style="animation-delay:3.7s">+------------------------------------------+</div>
+  <div class="boot-line" style="animation-delay:4.0s">Launching desktop environment...</div>
+  <div class="boot-line" style="animation-delay:4.2s">LOADING... <span id="boot-pct">0</span>%</div>
+</div>
+
+<!-- SPLASH -->
+<div id="splash">
+  <pre class="ascii-logo"> ____    _    _   _ ___ _____ _
+|  _ \  / \  | \ | |_ _| ____| |
+| | | |/ _ \ |  \| || ||  _| | |
+| |_| / ___ \| |\  || || |___| |___
+|____/_/   \_\_| \_|___|_____|_____|</pre>
+  <div class="splash-sub">Welcome to DF-OS v1.0</div>
+  <div class="splash-role">Automation Test Engineer &bull; 4+ yrs &bull; OneOrigin</div>
+  <div class="splash-btns">
+    <button class="splash-btn" id="explore-btn">&#9658; EXPLORE PORTFOLIO</button>
+  </div>
+  <div class="splash-hint">Navigate using the icons on the right</div>
+</div>
+
+<!-- STATUS BAR -->
+<div id="status-bar">
+  <span class="status-badge">&#x1F7E2; Open to Opportunities</span>
+  <a class="status-link" href="https://www.linkedin.com/in/daniel-fernandes-1808b51b1/" target="_blank">&#x1F517; LinkedIn</a>
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+  <!-- ICON DOCK -->
+  <div id="icon-dock">
+    <div class="icon-pair">
+      <div class="desktop-icon" id="icon-terminal" onclick="openWindow('terminal-window','icon-terminal')"><div class="icon-emoji">&gt;_</div><div class="icon-label">Terminal</div></div>
+      <div class="desktop-icon" id="icon-files" onclick="openWindow('files-window','icon-files')"><div class="icon-emoji">&#128194;</div><div class="icon-label">Files</div></div>
+    </div>
+    <div class="icon-pair">
+      <div class="desktop-icon" id="icon-projects" onclick="openWindow('projects-window','icon-projects')"><div class="icon-emoji">&#128193;</div><div class="icon-label">Projects</div></div>
+      <div class="desktop-icon" id="icon-logs" onclick="openWindow('logs-window','icon-logs')"><div class="icon-emoji">&#128203;</div><div class="icon-label">Logs</div></div>
+    </div>
+    <div class="icon-pair">
+      <div class="desktop-icon" id="icon-about" onclick="openWindow('about-window','icon-about')"><div class="icon-emoji">&#128100;</div><div class="icon-label">About</div></div>
+      <div class="desktop-icon" id="icon-skills" onclick="openWindow('skills-window','icon-skills')"><div class="icon-emoji">&#9881;</div><div class="icon-label">Skills</div></div>
+    </div>
+    <div class="icon-pair">
+      <div class="desktop-icon" id="icon-radar" onclick="openWindow('radar-window','icon-radar')"><div class="icon-emoji">&#128202;</div><div class="icon-label">Radar</div></div>
+      <div class="desktop-icon" id="icon-awards" onclick="openWindow('awards-window','icon-awards')"><div class="icon-emoji">&#127942;</div><div class="icon-label">Awards</div></div>
+    </div>
+    <div class="icon-pair">
+      <div class="desktop-icon" id="icon-resume" onclick="openWindow('resume-window','icon-resume')"><div class="icon-emoji">&#128196;</div><div class="icon-label">Resume</div></div>
+      <div class="desktop-icon" id="icon-timeline" onclick="openWindow('timeline-window','icon-timeline')"><div class="icon-emoji">&#128197;</div><div class="icon-label">Timeline</div></div>
+    </div>
+  </div>
+
+  <!-- TERMINAL WINDOW -->
+  <div class="window" id="terminal-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'terminal-window')">
+      <span class="window-title">TERMINAL_V1.0.exe</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('terminal-window','icon-terminal')">X</div></div>
+    </div>
+    <div class="window-content" id="terminal-content">
+      <div class="terminal-output">
+        <pre class="ascii-art"> ____    _    _   _ ___ _____ _
+|  _ \  / \  | \ | |_ _| ____| |
+| | | |/ _ \ |  \| || ||  _| | |
+| |_| / ___ \| |\  || || |___| |___
+|____/_/   \_\_| \_|___|_____|_____|</pre>
+        <div><span class="prompt">root@daniel:~$</span> cat welcome_message.txt</div><br>
+        <p><span class="green">Welcome to DF-OS [Version 1.0.2024]</span><br>(c) Daniel Fernandes Corp. All rights reserved.</p><br>
+        <p><span class="yellow">System Status:</span> <span class="green">ONLINE</span><br>
+        <span class="yellow">Memory:</span> 640KB OK<br>
+        <span class="yellow">Role:</span> Automation Test Engineer @ OneOrigin<br>
+        <span class="yellow">Location:</span> Bengaluru, Karnataka</p><br>
+        <div><span class="prompt">root@daniel:~$</span> sh ./init_portfolio.sh</div>
+        <div class="green">Portfolio initialized successfully! &#10003;</div><br>
+        <p>Type <span class="yellow">'help'</span> for available commands.</p><br>
+      </div>
+      <div class="terminal-input-line">
+        <span class="prompt">root@daniel:~$</span>
+        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT WINDOW -->
+  <div class="window" id="about-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'about-window')">
+      <span class="window-title">ABOUT_ME.info</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('about-window','icon-about')">X</div></div>
+    </div>
+    <div class="window-content">
+      <div class="about-header">
+        <div class="avatar-box">DF</div>
+        <div><div class="about-name">DANIEL FERNANDES</div><div class="about-role">Automation Test Engineer</div></div>
+      </div>
+      <div class="about-info">
+        <p>QA professional with 4+ years of experience in test automation, performance testing, and cloud-based QA. Proven track record of increasing testing efficiency and reducing defect rates across enterprise projects.</p><br>
+        <p><span class="lbl">Education:</span><br>
+        &gt; PG Cert AI &amp; ML &#8212; Amrita Vishwa Vidyapeetham (2022)<br>
+        &gt; BCA (Computer Application) &#8212; Mangalore University (2018&#8211;2020)</p><br>
+        <p>&gt; <span class="lbl">Email:</span> fernanesdaniel.df9@gmail.com<br>
+        &gt; <span class="lbl">Phone:</span> 9740937182<br>
+        &gt; <span class="lbl">Node:</span> Bengaluru, Karnataka<br>
+        &gt; <span class="lbl">LinkedIn:</span> /in/daniel-fernandes-1808b51b1/</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS WINDOW -->
+  <div class="window" id="skills-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'skills-window')">
+      <span class="window-title">TECH_STACK.cfg</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('skills-window','icon-skills')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">LOADED_MODULES</h3>
+      <div class="skill-category"><div class="skill-cat-label">[Automation &amp; Testing]</div>
+        <div class="skill-tags"><span class="skill-tag">Playwright</span><span class="skill-tag">Cypress</span><span class="skill-tag">Selenium WebDriver</span><span class="skill-tag">BDD Cucumber</span><span class="skill-tag">HPE Service Virtualization</span></div>
+      </div>
+      <div class="skill-category"><div class="skill-cat-label">[Programming &amp; Scripting]</div>
+        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span></div>
+      </div>
+      <div class="skill-category"><div class="skill-cat-label">[Performance &amp; API Testing]</div>
+        <div class="skill-tags"><span class="skill-tag">JMeter</span><span class="skill-tag">Postman</span><span class="skill-tag">SoapUI</span><span class="skill-tag">API Automation</span></div>
+      </div>
+      <div class="skill-category"><div class="skill-cat-label">[Cloud Platforms]</div>
+        <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Google Cloud</span></div>
+      </div>
+      <div class="skill-category"><div class="skill-cat-label">[Methodologies &amp; Tools]</div>
+        <div class="skill-tags"><span class="skill-tag">Agile/Scrum</span><span class="skill-tag">JIRA</span><span class="skill-tag">Confluence</span><span class="skill-tag">Manual Testing</span><span class="skill-tag">STLC</span><span class="skill-tag">DB2</span><span class="skill-tag">PyCharm</span><span class="skill-tag">Jupyter Notebook</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE WINDOW -->
+  <div class="window" id="logs-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'logs-window')">
+      <span class="window-title">SYSTEM_LOGS.txt</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('logs-window','icon-logs')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">EXPERIENCE_LOG</h3>
+      <div class="exp-entry">
+        <div class="exp-date">[OCT 2023 - PRESENT]</div>
+        <div class="exp-title">OneOrigin - Automation Test Engineer</div>
+        <div class="exp-bullet">Led QA ensuring 100% business objective compliance</div>
+        <div class="exp-bullet">+65% testing efficiency via automated test scripts</div>
+        <div class="exp-bullet">-20% testing cycle time; -15% via process improvements</div>
+        <div class="exp-bullet">Performance testing with JMeter: +40% system stability</div>
+        <div class="exp-bullet">+30% cloud testing coverage on AWS applications</div>
+        <div class="exp-bullet">Mentored junior QA engineers: +25% team productivity</div>
+        <div class="exp-bullet">Validated 50+ product requirement specifications</div>
+        <div class="exp-bullet">+20% sprint velocity via Agile ceremony participation</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-date">[NOV 2020 - JUL 2023]</div>
+        <div class="exp-title">Cognizant - Test Analyst</div>
+        <div class="exp-bullet">Selenium WebDriver automation: -70% manual testing effort</div>
+        <div class="exp-bullet">Python automation solution: -75% testing cycle time</div>
+        <div class="exp-bullet">Cypress data validation: -60% audit team involvement</div>
+        <div class="exp-bullet">Chatbot QA for Cigna Healthcare: -50% data intake time</div>
+        <div class="exp-bullet">SQL &amp; DB2 data mining: +30% decision-making accuracy</div>
+        <div class="exp-bullet">MyCigna sales demo portal via HPE Service Virtualization</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS WINDOW -->
+  <div class="window" id="projects-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'projects-window')">
+      <span class="window-title">./PROJECTS/CASE_STUDIES</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('projects-window','icon-projects')">X</div></div>
+    </div>
+    <div class="window-content">
+      <p style="color:var(--muted-foreground);font-size:11px;margin-bottom:10px;">Click a project to view the full case study:</p>
+      <div class="projects-grid">
+        <div class="project-card" onclick="showProject('playwright')"><div class="project-icon">&#127914;</div><div class="project-name">Playwright Web Automation</div><div class="project-desc">End-to-end test framework with JS</div></div>
+        <div class="project-card" onclick="showProject('cypress')"><div class="project-icon">&#127807;</div><div class="project-name">Cypress Data Validation</div><div class="project-desc">Automated audit validation suite</div></div>
+        <div class="project-card" onclick="showProject('chatbot')"><div class="project-icon">&#129302;</div><div class="project-name">Chatbot QA - Cigna</div><div class="project-desc">Data intake automation chatbot testing</div></div>
+        <div class="project-card" onclick="showProject('python')"><div class="project-icon">&#128013;</div><div class="project-name">Python Test Automation</div><div class="project-desc">Accelerated testing cycles by 75%</div></div>
+        <div class="project-card" onclick="showProject('jmeter')"><div class="project-icon">&#9889;</div><div class="project-name">JMeter Performance Suite</div><div class="project-desc">Scalability testing for 3 key apps</div></div>
+        <div class="project-card" onclick="showProject('salesportal')"><div class="project-icon">&#127970;</div><div class="project-name">MyCigna Sales Demo Portal</div><div class="project-desc">HPE Service Virtualization testing</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL WINDOW -->
+  <div class="window" id="project-detail-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'project-detail-window')">
+      <span class="window-title" id="proj-detail-title">PROJECT_DETAIL.txt</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('project-detail-window','')">X</div></div>
+    </div>
+    <div class="window-content" id="proj-detail-body"></div>
+  </div>
+
+  <!-- AWARDS WINDOW -->
+  <div class="window" id="awards-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'awards-window')">
+      <span class="window-title">ACHIEVEMENTS.exe</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('awards-window','icon-awards')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">ACHIEVEMENTS &amp; AWARDS</h3>
+      <div class="awards-section">
+        <div class="awards-section-title">-- AWARDS --</div>
+        <div class="award-item"><div class="award-icon">&#129351;</div><div><div class="award-name">Performance Excellence - Q1 2024</div><div class="award-desc">Certificate of recognition for excellent work, dedication and high quality delivery at OneOrigin.</div></div></div>
+        <div class="award-item"><div class="award-icon">&#129352;</div><div><div class="award-name">Customer Success - Q2 2024</div><div class="award-desc">Certification for outstanding dedication in customer satisfaction.</div></div></div>
+      </div>
+      <div class="awards-section">
+        <div class="awards-section-title">-- CERTIFICATIONS --</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Google Cloud Skills Boost (4 badges)</div><div class="cert-issuer">Google Cloud</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Salesforce Developer (790,000 pts)</div><div class="cert-issuer">Salesforce</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">IBM Data Science Foundations - Level 2</div><div class="cert-issuer">IBM</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Automation Anywhere RPA Developer Essentials</div><div class="cert-issuer">Automation Anywhere University</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">VMware Network Virtualization Concepts</div><div class="cert-issuer">IT Academy</div></div></div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span><div><div class="cert-name">Cisco Introduction to Cybersecurity</div><div class="cert-issuer">Cisco</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE WINDOW -->
+  <div class="window" id="timeline-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'timeline-window')">
+      <span class="window-title">CAREER_TIMELINE.exe</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('timeline-window','icon-timeline')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">CAREER TIMELINE</h3>
+      <div class="timeline-list">
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">OCT 2023 - Present</div><div class="timeline-role">Automation Test Engineer</div><div class="timeline-org">OneOrigin, Bengaluru</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">NOV 2020 - JUL 2023</div><div class="timeline-role">Test Analyst</div><div class="timeline-org">Cognizant, Bengaluru</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">JAN 2022 - NOV 2022</div><div class="timeline-role">PG Cert - AI &amp; ML</div><div class="timeline-org">Amrita Vishwa Vidyapeetham (Remote)</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">JUN 2018 - SEP 2020</div><div class="timeline-role">BCA - Computer Application</div><div class="timeline-org">Mangalore University</div></div>
+      </div>
+      <p style="color:var(--muted-foreground);font-size:10px;margin-top:12px;">Click any milestone to expand details</p>
+    </div>
+  </div>
+
+  <!-- FILES WINDOW -->
+  <div class="window" id="files-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'files-window')">
+      <span class="window-title">D:\PORTFOLIO_ARCHIVE</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('files-window','icon-files')">X</div></div>
+    </div>
+    <div class="window-content">
+      <div class="file-list">
+        <div class="file-item" onclick="openWindow('about-window','icon-about')"><span class="file-icon">&#128196;</span><span class="file-name">ABOUT_ME.info</span><span class="file-size">2 KB</span></div>
+        <div class="file-item" onclick="openWindow('skills-window','icon-skills')"><span class="file-icon">&#9881;</span><span class="file-name">TECH_STACK.cfg</span><span class="file-size">4 KB</span></div>
+        <div class="file-item" onclick="openWindow('logs-window','icon-logs')"><span class="file-icon">&#128203;</span><span class="file-name">SYSTEM_LOGS.txt</span><span class="file-size">8 KB</span></div>
+        <div class="file-item" onclick="openWindow('projects-window','icon-projects')"><span class="file-icon">&#128193;</span><span class="file-name">PROJECTS/</span><span class="file-size">6 items</span></div>
+        <div class="file-item" onclick="openWindow('awards-window','icon-awards')"><span class="file-icon">&#127942;</span><span class="file-name">ACHIEVEMENTS.exe</span><span class="file-size">3 KB</span></div>
+        <div class="file-item" onclick="openWindow('timeline-window','icon-timeline')"><span class="file-icon">&#128197;</span><span class="file-name">CAREER_TIMELINE.exe</span><span class="file-size">1 KB</span></div>
+        <div class="file-item" onclick="openWindow('resume-window','icon-resume')"><span class="file-icon">&#128196;</span><span class="file-name">RESUME.pdf</span><span class="file-size">132 KB</span></div>
+        <div class="file-item" onclick="openWindow('radar-window','icon-radar')"><span class="file-icon">&#128202;</span><span class="file-name">SKILL_RADAR.dat</span><span class="file-size">1 KB</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RADAR WINDOW -->
+  <div class="window" id="radar-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'radar-window')">
+      <span class="window-title">SKILL_RADAR.dat</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('radar-window','icon-radar')">X</div></div>
+    </div>
+    <div class="window-content" style="display:flex;flex-direction:column;align-items:center;">
+      <h3 class="section-heading">SKILL PROFICIENCY RADAR</h3>
+      <canvas id="radar-canvas" width="270" height="270"></canvas>
+    </div>
+  </div>
+
+  <!-- RESUME WINDOW -->
+  <div class="window" id="resume-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'resume-window')">
+      <span class="window-title">RESUME.pdf</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('resume-window','icon-resume')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">DANIEL FERNANDES</h3>
+      <p style="text-align:center;color:var(--muted-foreground);font-size:11px;margin-bottom:14px;">fernanesdaniel.df9@gmail.com | 9740937182 | Bengaluru, Karnataka</p>
+      <div class="resume-section">
+        <div class="resume-section-title">EXPERIENCE</div>
+        <div class="resume-item"><div class="resume-item-title">Automation Test Engineer - OneOrigin</div><div class="resume-item-sub">Oct 2023 - Present | Bengaluru, Karnataka</div></div>
+        <div class="resume-item"><div class="resume-item-title">Test Analyst - Cognizant</div><div class="resume-item-sub">Nov 2020 - Jul 2023 | Bengaluru, Karnataka</div></div>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">EDUCATION</div>
+        <div class="resume-item"><div class="resume-item-title">PG Certification - AI &amp; ML</div><div class="resume-item-sub">Amrita Vishwa Vidyapeetham | 2022</div></div>
+        <div class="resume-item"><div class="resume-item-title">BCA - Computer Application</div><div class="resume-item-sub">Mangalore University | 2018-2020</div></div>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">KEY SKILLS</div>
+        <p style="font-size:11px;color:var(--phosphor-white);line-height:1.8;">Playwright · Cypress · Selenium · BDD Cucumber · Python · Java · JavaScript · SQL · JMeter · Postman · AWS · Google Cloud · Agile/Scrum · JIRA</p>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">CERTIFICATIONS</div>
+        <p style="font-size:11px;color:var(--phosphor-white);line-height:1.8;">AWS Cloud Practitioner · Google Cloud Skills Boost · Salesforce Developer · IBM Data Science · Automation Anywhere RPA · Cisco Cybersecurity</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIPPY -->
+  <div id="clippy">
+    <div class="window-titlebar" style="cursor:default;">
+      <span class="window-title">Clippy</span>
+      <div class="window-controls"><div class="win-btn close" onclick="document.getElementById('clippy').classList.remove('visible')">X</div></div>
+    </div>
+    <div style="padding:8px;">
+      <div class="clippy-inner">
+        <div class="clippy-icon">&#128206;</div>
+        <div class="clippy-text" id="clippy-text">It looks like you're hiring a QA engineer! May I suggest Daniel?</div>
+      </div>
+      <div class="clippy-btns">
+        <button class="clippy-btn" id="clippy-next">Next Tip</button>
+        <button class="clippy-btn" onclick="document.getElementById('clippy').classList.remove('visible')">Go Away</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /desktop -->
+
+<!-- TASKBAR -->
+<div id="taskbar">
+  <button id="start-btn">START</button>
+  <div id="taskbar-windows"></div>
+  <div id="taskbar-right">
+    <span>&#128100; #DF01</span>
+    <span id="clock"></span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+

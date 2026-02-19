@@ -1,0 +1,113 @@
+  <!-- TIMELINE WINDOW -->
+  <div class="window" id="timeline-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'timeline-window')">
+      <span class="window-title">CAREER_TIMELINE.exe</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('timeline-window','icon-timeline')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">CAREER TIMELINE</h3>
+      <div class="timeline-list">
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">OCT 2023 - Present</div><div class="timeline-role">Automation Test Engineer</div><div class="timeline-org">OneOrigin, Bengaluru</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">NOV 2020 - JUL 2023</div><div class="timeline-role">Test Analyst</div><div class="timeline-org">Cognizant, Bengaluru</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">JAN 2022 - NOV 2022</div><div class="timeline-role">PG Cert - AI &amp; ML</div><div class="timeline-org">Amrita Vishwa Vidyapeetham (Remote)</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">JUN 2018 - SEP 2020</div><div class="timeline-role">BCA - Computer Application</div><div class="timeline-org">Mangalore University</div></div>
+      </div>
+      <p style="color:var(--muted-foreground);font-size:10px;margin-top:12px;">Click any milestone to expand details</p>
+    </div>
+  </div>
+
+  <!-- FILES WINDOW -->
+  <div class="window" id="files-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'files-window')">
+      <span class="window-title">D:\PORTFOLIO_ARCHIVE</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('files-window','icon-files')">X</div></div>
+    </div>
+    <div class="window-content">
+      <div class="file-list">
+        <div class="file-item" onclick="openWindow('about-window','icon-about')"><span class="file-icon">&#128196;</span><span class="file-name">ABOUT_ME.info</span><span class="file-size">2 KB</span></div>
+        <div class="file-item" onclick="openWindow('skills-window','icon-skills')"><span class="file-icon">&#9881;</span><span class="file-name">TECH_STACK.cfg</span><span class="file-size">4 KB</span></div>
+        <div class="file-item" onclick="openWindow('logs-window','icon-logs')"><span class="file-icon">&#128203;</span><span class="file-name">SYSTEM_LOGS.txt</span><span class="file-size">8 KB</span></div>
+        <div class="file-item" onclick="openWindow('projects-window','icon-projects')"><span class="file-icon">&#128193;</span><span class="file-name">PROJECTS/</span><span class="file-size">6 items</span></div>
+        <div class="file-item" onclick="openWindow('awards-window','icon-awards')"><span class="file-icon">&#127942;</span><span class="file-name">ACHIEVEMENTS.exe</span><span class="file-size">3 KB</span></div>
+        <div class="file-item" onclick="openWindow('timeline-window','icon-timeline')"><span class="file-icon">&#128197;</span><span class="file-name">CAREER_TIMELINE.exe</span><span class="file-size">1 KB</span></div>
+        <div class="file-item" onclick="openWindow('resume-window','icon-resume')"><span class="file-icon">&#128196;</span><span class="file-name">RESUME.pdf</span><span class="file-size">132 KB</span></div>
+        <div class="file-item" onclick="openWindow('radar-window','icon-radar')"><span class="file-icon">&#128202;</span><span class="file-name">SKILL_RADAR.dat</span><span class="file-size">1 KB</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RADAR WINDOW -->
+  <div class="window" id="radar-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'radar-window')">
+      <span class="window-title">SKILL_RADAR.dat</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('radar-window','icon-radar')">X</div></div>
+    </div>
+    <div class="window-content" style="display:flex;flex-direction:column;align-items:center;">
+      <h3 class="section-heading">SKILL PROFICIENCY RADAR</h3>
+      <canvas id="radar-canvas" width="270" height="270"></canvas>
+    </div>
+  </div>
+
+  <!-- RESUME WINDOW -->
+  <div class="window" id="resume-window">
+    <div class="window-titlebar" onmousedown="startDrag(event,'resume-window')">
+      <span class="window-title">RESUME.pdf</span>
+      <div class="window-controls"><div class="win-btn">_</div><div class="win-btn close" onclick="closeWindow('resume-window','icon-resume')">X</div></div>
+    </div>
+    <div class="window-content">
+      <h3 class="section-heading">DANIEL FERNANDES</h3>
+      <p style="text-align:center;color:var(--muted-foreground);font-size:11px;margin-bottom:14px;">fernanesdaniel.df9@gmail.com | 9740937182 | Bengaluru, Karnataka</p>
+      <div class="resume-section">
+        <div class="resume-section-title">EXPERIENCE</div>
+        <div class="resume-item"><div class="resume-item-title">Automation Test Engineer - OneOrigin</div><div class="resume-item-sub">Oct 2023 - Present | Bengaluru, Karnataka</div></div>
+        <div class="resume-item"><div class="resume-item-title">Test Analyst - Cognizant</div><div class="resume-item-sub">Nov 2020 - Jul 2023 | Bengaluru, Karnataka</div></div>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">EDUCATION</div>
+        <div class="resume-item"><div class="resume-item-title">PG Certification - AI &amp; ML</div><div class="resume-item-sub">Amrita Vishwa Vidyapeetham | 2022</div></div>
+        <div class="resume-item"><div class="resume-item-title">BCA - Computer Application</div><div class="resume-item-sub">Mangalore University | 2018-2020</div></div>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">KEY SKILLS</div>
+        <p style="font-size:11px;color:var(--phosphor-white);line-height:1.8;">Playwright · Cypress · Selenium · BDD Cucumber · Python · Java · JavaScript · SQL · JMeter · Postman · AWS · Google Cloud · Agile/Scrum · JIRA</p>
+      </div>
+      <div class="resume-section">
+        <div class="resume-section-title">CERTIFICATIONS</div>
+        <p style="font-size:11px;color:var(--phosphor-white);line-height:1.8;">AWS Cloud Practitioner · Google Cloud Skills Boost · Salesforce Developer · IBM Data Science · Automation Anywhere RPA · Cisco Cybersecurity</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIPPY -->
+  <div id="clippy">
+    <div class="window-titlebar" style="cursor:default;">
+      <span class="window-title">Clippy</span>
+      <div class="window-controls"><div class="win-btn close" onclick="document.getElementById('clippy').classList.remove('visible')">X</div></div>
+    </div>
+    <div style="padding:8px;">
+      <div class="clippy-inner">
+        <div class="clippy-icon">&#128206;</div>
+        <div class="clippy-text" id="clippy-text">It looks like you're hiring a QA engineer! May I suggest Daniel?</div>
+      </div>
+      <div class="clippy-btns">
+        <button class="clippy-btn" id="clippy-next">Next Tip</button>
+        <button class="clippy-btn" onclick="document.getElementById('clippy').classList.remove('visible')">Go Away</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /desktop -->
+
+<!-- TASKBAR -->
+<div id="taskbar">
+  <button id="start-btn">START</button>
+  <div id="taskbar-windows"></div>
+  <div id="taskbar-right">
+    <span>&#128100; #DF01</span>
+    <span id="clock"></span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
